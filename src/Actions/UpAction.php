@@ -11,7 +11,7 @@ class UpAction extends Action
         parent::setUp();
 
         $this
-            ->icon('heroicon-s-arrow-circle-up')
+            ->icon('heroicon-s-arrow-up-circle')
             ->iconButton()
             ->action(static fn ($record) => $record->moveOrderUp())
             ->visible(static function ($record) {

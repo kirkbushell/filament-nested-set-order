@@ -11,7 +11,7 @@ class DownAction extends Action
         parent::setUp();
 
         $this
-            ->icon('heroicon-s-arrow-circle-up')
+            ->icon('heroicon-s-arrow-down-circle')
             ->iconButton()
             ->action(static fn ($record) => $record->moveOrderUp())
             ->visible(static function ($record) {
