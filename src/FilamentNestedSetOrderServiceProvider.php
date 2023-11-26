@@ -2,15 +2,14 @@
 
 namespace Antwerpes\FilamentNestedSetOrder;
 
-use Filament\PluginServiceProvider;
-use Spatie\LaravelPackageTools\Package;
+use Illuminate\Support\ServiceProvider;
 
-class FilamentNestedSetOrderServiceProvider extends PluginServiceProvider
+class FilamentNestedSetOrderServiceProvider extends ServiceProvider
 {
-    public function configurePackage(Package $package): void
+    public function boot(): void
     {
-        $package
-            ->name('filament-nested-set-order')
-            ->hasConfigFile();
+        $this->publishes([
+            __DIR__.'/../config/filament-nested-set-order.php' => config_path('filament-nested-set-order.php'),
+        ]);
     }
 }
