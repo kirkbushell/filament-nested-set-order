@@ -41,13 +41,6 @@
             "pestphp/pest-plugin": false
         }
     },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Antwerpes\\FilamentNestedSetOrder\\FilamentNestedSetOrderServiceProvider"
-            ]
-        }
-    },
     "minimum-stability": "dev",
     "prefer-stable": true
 }
