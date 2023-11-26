@@ -15,7 +15,7 @@ class DownAction extends Action
             ->iconButton()
             ->action(static fn ($record) => $record->moveOrderUp())
             ->visible(static function ($record) {
-                $last = $record->buildSortQuery()->ordered()->last();
+                $last = $record->buildSortQuery()->ordered('desc')->first();
 
                 return $record->id !== $last?->id;
             });
